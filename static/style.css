@@ -1,0 +1,132 @@
+/* Загальні стилі для всього документа */
+body {
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(135deg, #6e7dff, #ff7b7b); /* Градієнт для фону */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #333;
+}
+
+/* Контейнер, в якому буде вся форма */
+.container {
+    background-color: #fff;
+    padding: 40px;
+    border-radius: 16px;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.15);
+    width: 600px; /* Зроблено більш прямокутним */
+    max-width: 90%; /* Адаптивна ширина */
+    height: auto;
+    transform: translateY(-20px);
+    animation: slideUp 0.5s ease-out;
+}
+
+/* Анімація для контейнера */
+@keyframes slideUp {
+    0% {
+        opacity: 0;
+        transform: translateY(50px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Заголовок */
+h1 {
+    font-size: 2.8rem; /* Збільшений розмір заголовка */
+    margin-bottom: 20px;
+    color: #333;
+    text-align: center;
+    font-weight: 600;
+}
+
+/* Стилі для форми та елементів */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Простір між елементами */
+}
+
+/* Поля введення та вибору */
+input[type="number"], select {
+    padding: 18px;
+    font-size: 1.2rem;
+    border: 1px solid #ccc;
+    border-radius: 10px;
+    width: 100%;
+    transition: all 0.3s ease-in-out;
+}
+
+input[type="number"]:focus, select:focus {
+    border-color: #6e7dff;
+    box-shadow: 0 0 10px rgba(110, 125, 255, 0.5);
+    outline: none;
+}
+
+/* Кнопка */
+button {
+    background-color: #6e7dff;
+    color: white;
+    padding: 18px;
+    border: none;
+    border-radius: 10px;
+    font-size: 1.3rem;
+    cursor: pointer;
+    width: 100%;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background-color: #5a6ce3;
+    transform: translateY(-2px);
+}
+
+button:active {
+    transform: translateY(1px);
+}
+
+/* Стилі для результату */
+.result {
+    margin-top: 40px;
+    background-color: #f9f9f9;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.result p {
+    font-size: 1.3rem;
+    color: #333;
+    margin: 10px 0;
+}
+
+.result p span {
+    font-weight: bold;
+    color: #6e7dff;
+}
+
+/* Стилі для адаптивності */
+@media (max-width: 768px) {
+    .container {
+        padding: 20px;
+    }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    input[type="number"], select {
+        padding: 15px;
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+    }
+}
